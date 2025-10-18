@@ -1,0 +1,18 @@
+server:
+  port: 9091
+
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: RESTAURANT-SERVICE
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true

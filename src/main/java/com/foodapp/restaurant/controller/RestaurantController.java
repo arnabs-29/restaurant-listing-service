@@ -33,4 +33,9 @@ public class RestaurantController {
         RestaurantDTO addedRestaurant=restaurantService.addRestaurantInDB(restaurantDTO);
         return new ResponseEntity<>(addedRestaurant,HttpStatus.CREATED);
     }
+
+    @GetMapping("/health")
+    public ResponseEntity<String> health() {
+        return new ResponseEntity<>("OK", HttpStatus.OK);
+    }
 }

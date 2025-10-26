@@ -16,12 +16,12 @@ import java.util.stream.Collectors;
 @Service
 public class RestaurantService {
 
-    @Autowired
-    RestaurantRepo restaurantRepo;
-
+    private final RestaurantRepo restaurantRepo;
     private final RestaurantMapper restaurantMapper;
 
-    public RestaurantService(RestaurantMapper restaurantMapper) {
+    @Autowired
+    public RestaurantService(RestaurantRepo restaurantRepo, RestaurantMapper restaurantMapper) {
+        this.restaurantRepo = restaurantRepo;
         this.restaurantMapper = restaurantMapper;
     }
 

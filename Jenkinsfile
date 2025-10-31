@@ -75,7 +75,7 @@ pipeline {
 
         stage('Update Image Tag in GitOps') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[ credentialsId: 'git-ssh', url: 'git@github.com:udemy-dev-withK8s-AWS-codedecode/deployment-folder.git']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[ credentialsId: 'git-ssh', url: 'git@github.com:arnabs-29/restaurant-listing-service.git']])
                 script {
                 sh '''
                   sed -i "s/image:.*/image: arnab2903\\/restaurant-listing-service:${VERSION}/" aws/restaurant-manifest.yml

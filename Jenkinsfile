@@ -34,7 +34,7 @@ pipeline {
             steps{
                 script{
                     def token= "squ_265aaece5e518efbde5b57acdc8e3560b013ce4f"
-                    def sonarQubeUrl= "http://3.25.132.187:9000/api"
+                    def sonarQubeUrl= "http://3.104.228.152:9000/api"
                     def componentKey="com.foodapp:restaurant"
                     def coverageThreshold=80.0
 
